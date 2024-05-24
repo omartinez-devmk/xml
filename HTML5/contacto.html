@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mi primera web - Contacto</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <h1>Mi Weblog de programación - Contacto</h1>
+                <p class="headerTitle">Si se puede imaginar, se puede programar.</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href=/index.html>Inicio</a></li>
+                    <li>JavaScript</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Sobre nosotros ...</li>
+                    <li>Contacto</li>
+                </ul>
+            </nav>
+        </header>
+        <div>
+            <form name="formulario1" method="post" action="datos.html">
+                <label for="Nombre y Apellido">Nombre:</label>
+                <input type="text" id="text" name="Nombre y Apellido" value="Nombre y Apellido"><br/>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="ejemplo@correo.com" value="ejemplo@correo.com"><br/>
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" rows="10" cols="50">Mensaje</textarea><br/>
+                <input type="submit" id="buttonsubmit" value="Enviar">
+                <input type="reset"  id="buttonreset" value="Borrar">
+            </form>
+        </div>
+        <footer>
+            <p class="footer">©2023 <a href="mailto:">Email Cliente</a></p>
+        </footer>
+    </body>
+    
+</html>

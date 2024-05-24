@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Declaración DTD -->
+<!DOCTYPE listaventas [
+    <!ELEMENT listaventas (venta+)>
+    <!ELEMENT venta (Importe, Comprador, Vendedor, Fecha?, CodigoFactura)>
+    <!ELEMENT Importe (#PCDATA)>
+    <!ELEMENT Comprador (#PCDATA)>
+    <!ELEMENT Vendedor (#PCDATA)>
+    <!ELEMENT Fecha (#PCDATA)>
+    <!ELEMENT CodigoFactura (#PCDATA)>
+]>
+<!-- Código XML de listaventas -->
+<listaventas>
+    <venta>
+        <Importe>1800</Importe>
+        <Comprador>Carlos Martínez</Comprador>
+        <Vendedor>APPLE</Vendedor>
+        <CodigoFactura>E17</CodigoFactura>  
+    </venta>
+    <venta>
+        <Importe>3200</Importe>
+        <Comprador>Carlos Martínez</Comprador> 
+        <Vendedor>APPLE</Vendedor>
+        <Fecha>19-11-2022</Fecha>
+        <CodigoFactura>E18</CodigoFactura>   
+    </venta>
+    <venta>
+        <Importe>995,50</Importe>
+        <Comprador>María García</Comprador> 
+        <Vendedor>HP</Vendedor>
+        <CodigoFactura>E19</CodigoFactura>   
+    </venta>   
+</listaventas>

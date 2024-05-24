@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- Declaración de documento XML-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="tienda">
+        <xs:complexType> <!-- Utilizamos 'complexType' porque tienda posee elementos hijos-->
+            <xs:sequence> <!-- 'sequence' nos indica que a continuación va una lista de elementos-->
+                <xs:element name="codigo" minOccurs="1" maxOccurs="1"> <!-- Aquí utlizamos minOccurs y maxOccurs para marcar la obligatoriedad de que la tienda tenga un código-->
+                <!-- Añadimos una restricción para limitar los valores a un número entre 1 y 100-->
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer"> 
+                            <xs:minInclusive value="1"></xs:minInclusive>
+                            <xs:maxInclusive value="100"></xs:maxInclusive>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element> <!-- Aquí marcamos la obligatoriedad de que exista 1 solo nombre y lo mismo con dirección, telefono etc -->
+                <xs:element name="direccion" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                <xs:element name="telefono" type="xs:integer" minOccurs="1" maxOccurs="1"></xs:element>
+                <xs:element name="web" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                <xs:element name="propietario" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element> <!-- Indicamos que el propietario tiene solo un nombre-->
+                            <xs:element name="telefono" minOccurs="0" maxOccurs="unbounded"> <!-- Indicamos que puede tener de ninguno a varios teléfonos-->
+                            <!-- Establecemos que el teléfono tenga una plantilla de 9 números-->
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[0-9]{9}"></xs:pattern> 
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="disco" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string"></xs:element>
+                            <xs:element name="artista" type="xs:string"></xs:element>
+                            <xs:element name="formato">
+                            <!-- Indicamos que el formato puede ser CD o Vinilo-->
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string"> 
+                                        <xs:enumeration value="CD"></xs:enumeration>
+                                        <xs:enumeration value="Vinilo"></xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="publicacion" type="xs:gYear"></xs:element> <!-- Seleccionamos el tipo de dato para año-->
+                            <xs:element name="precio" type="xs:decimal"></xs:element> <!-- Selecionamos el tipo de dato con decimales para representar mejor el precio-->
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

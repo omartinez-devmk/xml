@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tienda.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<tienda>
+
+    <codigo>1</codigo>
+    <nombre>La casa del disco</nombre>   
+    <direccion>Gran Via, 35</direccion>
+    <telefono>914558901</telefono>
+    <web>https://www.lacasadeldisco.com</web>
+    
+    <propietario>
+        <nombre>Carlos Fernández</nombre>
+        <telefono>669595959</telefono>
+        <telefono>669595960</telefono>
+    </propietario>
+    
+    <disco>
+        <titulo>The Show</titulo>
+        <artista>Niall Horan </artista>
+        <formato>CD</formato>
+        <publicacion>2022</publicacion>
+        <precio>19.99</precio>
+    </disco>
+    
+    <disco>
+        <titulo>Entre dos aguas</titulo>
+        <artista>Paco de Lucía </artista>
+        <formato>Vinilo</formato>
+        <publicacion>2023</publicacion>
+        <precio>17.01</precio>
+    </disco>
+    
+    <disco>
+        <titulo>Camino</titulo>
+        <artista>Niña Pastori </artista>
+        <formato>CD</formato>
+        <publicacion>2023</publicacion>
+        <precio>16.83</precio>
+    </disco>
+
+</tienda>

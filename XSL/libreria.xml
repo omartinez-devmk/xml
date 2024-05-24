@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="libreria.xsl" type="text/xsl"?>
+
+<libreria>
+    <codigo>100</codigo>
+    <direccion>Gran Via, 35</direccion>
+    <telefono>914558901</telefono>
+    <propietario>
+        <nombre>Sara Fernández</nombre>
+        <telefono>669595959</telefono>
+    </propietario>
+    <libro>
+        <titulo>El cuco de cristal</titulo>
+        <autor>Javier Castillo</autor>
+        <formato>Tapa blanda</formato>
+        <publicacion>2022</publicacion>
+        <precio>19.85</precio>
+    </libro>
+    <libro>
+        <titulo>Cuando era divertido</titulo>
+        <autor>Eloy Moreno</autor>
+        <formato>Tapa dura</formato>
+        <publicacion>2022</publicacion>
+        <precio>18.90</precio>
+    </libro>
+    <libro>
+        <titulo>De vuelta a casa</titulo>
+        <autor>Kate Morton</autor>
+        <formato>Tapa dura</formato>
+        <publicacion>2022</publicacion>
+        <precio>21.75</precio>
+        <cantidad>10</cantidad>
+    </libro>
+</libreria>
